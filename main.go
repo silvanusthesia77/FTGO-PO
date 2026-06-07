@@ -4,7 +4,8 @@ import "fmt"
 
 func main() {
 	// dataType()
-	array()
+	// array()
+	learnSlice()
 }
 
 func dataType() {
@@ -77,3 +78,40 @@ func array() {
 }
 
 // Slice
+
+func learnSlice() {
+	fruits := make([]string, 4)
+	fruits[0] = "Thobiaz"
+	fruits[1] = "Reza"
+	fruits[2] = "Marvel"
+	fruits[3] = "David"
+
+	for _, v := range fruits {
+		fmt.Println(v)
+	}
+
+	// append
+
+	schools1 := []string{"Smansa", "SMA YPK", "SMA Agustinus"}
+	schools2 := []string{"SDN 15", "SDN 14", "SD YPPK"}
+	schools2 = append(schools2, schools1...)
+	fmt.Println(schools2)
+
+	fmt.Println("Masuk pada Copy Func :")
+
+	// slice copy function
+	member1 := []string{"Golix", "William", "Syukri"}
+	member2 := []string{"Imal", "Clif", "Marcel"}
+	mm := copy(member1, member2)
+
+	fmt.Println("Member 1 -->", member1)
+	fmt.Println("Member 2 -->", member2)
+	fmt.Println("Hasil Coppy -->", mm)
+
+	// Slice (slicing)
+
+	var car = []string{"Toyota", "Honda", "Suzuki", "Jave", "python", "vscode"}
+	var car1 = car[2:]
+	fmt.Println(car1)
+
+}
