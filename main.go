@@ -114,4 +114,44 @@ func learnSlice() {
 	var car1 = car[2:]
 	fmt.Println(car1)
 
+	cars := []string{"abu", "ikan", "nasi", "sayur"}
+	cars = append(cars[:1], "Thobbyy")
+	carss := cars[1:]
+	fmt.Println(carss)
+	fmt.Println()
+
+	// Slice (backing array)
+
+	fruits1 := []string{"Jambu", "Mangga", "Strewberry", "pineaple"}
+
+	fruits2 := fruits1[:2]
+	fruits1[0] = "Encap"
+	fmt.Println("Hasil Dari slicing :", fruits2)
+	fmt.Println("hasil dari Perubahan :", fruits1)
+
+	// Slice (cap function)
+	students := []string{"Wanus", "Thobiaz", "reza", "Iman", "Marvel"}
+
+	fmt.Println("Hasil Cap :", cap(students))
+	fmt.Println("Hasil len :", len(students))
+
+	// Slice (creating a new backing array)
+
+	trucks := []string{"Suzuki", "Honda", "Matic", "Green Car"}
+	trucks[2] = "Yamaha"
+
+	fmt.Println(trucks)
+
+	for _, v := range trucks {
+		fmt.Println(v)
+	}
+
+	newTrucks := []string{}
+	newTrucks = append(newTrucks, trucks[2:]...)
+	fmt.Println(newTrucks)
+
+	// latihan
+	i := 21
+	fmt.Printf("%v\n", i)
+	fmt.Printf("%T \n", i)
 }
