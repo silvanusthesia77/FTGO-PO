@@ -67,28 +67,28 @@ func learnSwitch(){
 // Nested Conditions
 
 func learnNested(){
-	nilai := 0
+	// nilai := 0
 
-	if nilai > 7 {
-		switch nilai{
-		case 8:
-			fmt.Println("Perfect")
-		default:
-			fmt.Println("Nice")
-		}
-	}else{
-		if nilai == 5 {
-		fmt.Println("Not Bad")	
-		}else if nilai == 3  {
-			fmt.Println("Keep Trying")
-		}else{
-			fmt.Println("You Can Do It")
-			if nilai == 0 {
-				fmt.Println("try Harder")
-			}
-		}
+	// if nilai > 7 {
+	// 	switch nilai{
+	// 	case 8:
+	// 		fmt.Println("Perfect")
+	// 	default:
+	// 		fmt.Println("Nice")
+	// 	}
+	// }else{
+	// 	if nilai == 5 {
+	// 	fmt.Println("Not Bad")	
+	// 	}else if nilai == 3  {
+	// 		fmt.Println("Keep Trying")
+	// 	}else{
+	// 		fmt.Println("You Can Do It")
+	// 		if nilai == 0 {
+	// 			fmt.Println("try Harder")
+	// 		}
+	// 	}
 
-	}
+	// }
 }
  func latihan(){
 	angka := 22
@@ -101,26 +101,42 @@ func learnNested(){
  }
 
  func learnLooping(){
-	for i := 0; i < 4; i++ {
-		fmt.Println("Angka", i)
-	}
+	// for i := 0; i < 4; i++ {
+	// 	fmt.Println("Angka", i)
+	// }
 
-	j := 0
+	// j := 0
 
-	for j < 5{
-		fmt.Println("Hasil AKhir :",j)
-		j++
-	}
+	// for j < 5{
+	// 	fmt.Println("Hasil AKhir :",j)
+	// 	j++
+	// }
 
-	k := 0
+	// k := 0
 
-	for{
-		fmt.Println("Halo :",k)
-		k++
+	// for{
+	// 	fmt.Println("Selamat Datang Rein :", k)
+	// 	k++
 
-		if k == 5{
-		break
+	// 	if k == 6{
+	// 		break
+	// 	}
+	// }
+
+	// for i := 0; i <= 10; i++ {
+	// 	if i%2 == 1{
+	// 		continue
+	// 	}
+	// 	if i > 8{
+	// 		break
+	// 	}
+	// 	fmt.Println("Lanjutkan :", i)
+	// }
+	for i := 0; i < 5; i++ {
+		for j := i; j < 5; j++ {
+			fmt.Print(j," ")
 		}
+		fmt.Println()
 	}
  }
-// 15Loopings (third way of looping)
+// Loopings (Label)

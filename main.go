@@ -5,7 +5,8 @@ import "fmt"
 func main() {
 	// dataType()
 	// array()
-	learnSlice()
+	// learnSlice()
+	latih()
 }
 
 func dataType() {
@@ -154,4 +155,14 @@ func learnSlice() {
 	i := 21
 	fmt.Printf("%v\n", i)
 	fmt.Printf("%T \n", i)
+}
+
+func latih(){
+	for i := 0; i < 5; i++ {
+		for j := i; j < 5; j++ {
+			fmt.Print(j," ")
+		}
+
+		fmt.Println()
+	}
 }
