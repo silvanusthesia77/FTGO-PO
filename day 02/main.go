@@ -132,11 +132,25 @@ func learnNested(){
 	// 	}
 	// 	fmt.Println("Lanjutkan :", i)
 	// }
-	for i := 0; i < 5; i++ {
-		for j := i; j < 5; j++ {
-			fmt.Print(j," ")
+	// for i := 0; i < 5; i++ {
+	// 	for j := i; j < 5; j++ {
+	// 		fmt.Print(j," ")
+	// 	}
+	// 	fmt.Println()
+	// }
+
+	outerLoop:
+for i := 0; i < 5; i++ {
+	fmt.Println("Looping ke -", i+1)
+	for j := 0; j < 4; j++ {
+		if i == 3 {
+			break outerLoop
 		}
-		fmt.Println()
+		fmt.Print(j, "")
 	}
+	fmt.Print("\n")
+	
+}
+
  }
 // Loopings (Label)
