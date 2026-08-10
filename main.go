@@ -9,7 +9,8 @@ func main() {
 	// learnVariable()
 	// learnDataType()
 	// learnConstantDanOperator()
-	learnArray()
+	// learnArray()
+	learnSlice()
 }
 func learnVariable() {
 	name := "thby"
@@ -85,7 +86,45 @@ func learnArray() {
 	fruits[1] = "banana"
 	fruits[2] = "papaya"
 	fmt.Println(fruits)
+	for key, v := range fruits {
+		fmt.Printf("Index : %v ==> Value : %v\n", key, v)
+	}
+	fmt.Println("\n", strings.Repeat("=", 43), "\n")
+
+	student := [2][3]string{{"Kuda", "Dog", "Cow"}, {"snake", "fish", "crocodile"}}
+
+	for _, v := range student {
+		for _, students := range v {
+			fmt.Println(students)
+		}
+	}
+
+}
+func learnSlice() {
+	players := []string{"thby", "luiz", "rez", "Golx"}
+	for _, v := range players {
+		fmt.Println(v)
+	}
+
+	student := make([]string, 3)
+	student[0] = "Anissa"
+	student[1] = "Noval"
+	student[2] = "firdy"
+	student = append(student, "wanus", "thby", "reza")
+	fmt.Println(student)
+
+	fmt.Println("\n", strings.Repeat("=", 40), "\n")
+
+	msg := []string{"manajement", "sistem informasi", "informatika", "akuntansi"}
+	msg1 := []string{"Unsia", "ui", "itb", "its"}
+
+	msg = append(msg, msg1...)
+	fmt.Println(msg)
+	copied := copy(msg, msg1)
+	fmt.Println(copied)
+
+	fmt.Println("\n", strings.Repeat("=", 40), "\n")
 
 }
 
-// pages 37
+// pages 46
