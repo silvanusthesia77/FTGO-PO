@@ -125,6 +125,46 @@ func learnSlice() {
 
 	fmt.Println("\n", strings.Repeat("=", 40), "\n")
 
+	// Slice (slicing)
+
+	buah := []string{"Jambu", "maggo", "pisang", "salak", "rambuatan", "melon", "smangka"}
+
+	buah1 := buah[2:]
+	buah2 := buah[1:3]
+	buah3 := buah[:3]
+
+	fmt.Println(buah1)
+	fmt.Println(buah2)
+	fmt.Println(buah3)
+
+	// Slice (combining slicing and append)
+
+	buah = append(buah[2:], "Sagu")
+	fmt.Println(buah)
+
+	// Slice (backing array)
+
+	lectures := []string{"fes", "halim", "luk", "nathan"}
+	fmt.Println(lectures)
+	lectures[1] = "thby"
+	lecture1 := lectures[:3]
+	fmt.Println(lecture1)
+
+	fmt.Println("\n", strings.Repeat("=", 45), "\n")
+
+	ojol := []string{"Rkl", "DRT", "MTH", "JDK", "LBH"}
+	fmt.Println("hasil cap :", cap(ojol))
+	fmt.Println("hasil leng :", len(ojol))
+	ojol1 := ojol[2:]
+	fmt.Println("Hasil Di slice :", cap(ojol1))
+	fmt.Println("hasil slice leng :", len(ojol1))
+
+	cars := []string{"Zuzuki", "Honda", "Yamaha", "Beat", "Mio", "Pajero"}
+	newCars := []string{}
+	fmt.Println("Jumlah Cars :", cars)
+	newCars = append(newCars, cars[2:]...)
+	fmt.Println("hasil akhir :", newCars)
+
 }
 
 // pages 46
