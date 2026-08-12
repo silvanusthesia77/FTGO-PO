@@ -10,7 +10,8 @@ func main() {
 	// learnDataType()
 	// learnConstantDanOperator()
 	// learnArray()
-	learnSlice()
+	// learnSlice()
+	learnCondition()
 }
 func learnVariable() {
 	name := "thby"
@@ -166,5 +167,46 @@ func learnSlice() {
 	fmt.Println("hasil akhir :", newCars)
 
 }
+func learnCondition() {
+	currentYear := 2026
+	age := currentYear - 2005
 
-// pages 46
+	if age < 17 {
+		fmt.Println("Kamu Belum Boleh Masuk")
+	} else {
+		fmt.Println("Silahkan Masuk")
+	}
+
+	nilai := 2
+
+	switch nilai {
+	case 8:
+		fmt.Println("Perfect")
+	case 7:
+		fmt.Println("Not Bad")
+	default:
+		{
+			fmt.Println("Maaf belum Lulus")
+			fmt.Println("Come back stronger")
+		}
+	}
+
+	// Switch with relational operators
+
+	hasil := 8
+
+	switch {
+	case hasil == 6:
+		fmt.Println("Congrats")
+	case (hasil < 10) && (hasil > 7):
+		fmt.Println("Selamat Datang")
+	default:
+		{
+			fmt.Println("Not Bad")
+			fmt.Println("But Not This time")
+		}
+	}
+
+}
+
+// pages 9
