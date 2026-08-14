@@ -11,7 +11,8 @@ func main() {
 	// learnConstantDanOperator()
 	// learnArray()
 	// learnSlice()
-	learnCondition()
+	// learnCondition()
+	learnLoopings()
 }
 func learnVariable() {
 	name := "thby"
@@ -207,6 +208,86 @@ func learnCondition() {
 		}
 	}
 
+	// Switch (fallthrough keyword)
+	nill := 8
+
+	switch {
+	case nill == 9:
+		fmt.Println("Nilainay Perfecto")
+	case nill < 10 && nill > 7:
+		fmt.Println("Good Job Bro !!")
+		fallthrough
+	default:
+		{
+			fmt.Println("Balik lagi thoby")
+			fmt.Println("Optimisss !!")
+		}
+	}
+
+	// Nested Condition
+
+	jmlh := 7
+
+	if jmlh > 8 {
+		switch jmlh {
+		case 8:
+			fmt.Println("Junior Sls")
+		default:
+			fmt.Println("not bad")
+
+		}
+	} else {
+		if jmlh == 7 {
+			switch jmlh {
+			case 7:
+				fmt.Println("Masuk !!")
+			default:
+				fmt.Println("Balik Lagi ananti")
+			}
+		} else if jmlh < 4 {
+			fmt.Println("Mantap Juga siihhh !!!")
+		} else {
+			fmt.Println("Back Again Next time")
+		}
+	}
+
+}
+func learnLoopings() {
+	for i := 0; i < 5; i++ {
+		fmt.Println("Angka :", i)
+	}
+
+	// Loopings (second way of looping)
+	j := 0
+
+	for j < 4 {
+		fmt.Println("Angka J :", j)
+		j++
+	}
+
+	// Loopings (third way of looping
+
+	nmb := 0
+	for {
+		fmt.Println("Hasil nmb :", nmb)
+		nmb++
+
+		if nmb > 5 {
+			break
+		}
+
+	}
+
+	// Loopings (break and continue keywords)
+	for i := 0; i < 10; i++ {
+		if i%2 == 1 {
+			continue
+		}
+		if i < 8 {
+			break
+		}
+		fmt.Println("Angka i :", i)
+	}
 }
 
-// pages 9
+// pages 11
