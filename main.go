@@ -12,7 +12,8 @@ func main() {
 	// learnArray()
 	// learnSlice()
 	// learnCondition()
-	learnLoopings()
+	// learnLoopings()
+	learnFunction("thby", 20)
 }
 func learnVariable() {
 	name := "thby"
@@ -288,6 +289,33 @@ func learnLoopings() {
 		}
 		fmt.Println("Angka i :", i)
 	}
+	fmt.Println("\n", strings.Repeat("=", 40), "\n")
+	// Loopings (Nested Looping)
+	for i := 0; i < 5; i++ {
+		for j := i; j < 5; j++ {
+			fmt.Print(j, " ")
+		}
+		fmt.Println()
+	}
+
+	// Loopings (Label)
+
+outerLooping:
+
+	for i := 0; i < 5; i++ {
+		fmt.Println("Nilai I ; ", i+1)
+		for j := 0; j < 5; j++ {
+			if i == 2 {
+				break outerLooping
+			}
+			fmt.Print(j, "")
+		}
+		fmt.Print("\n")
+	}
+}
+func learnFunction(name string, age int) {
+	fmt.Printf("Halo Pekenalkan nama saya %s , saya berusia %d \n", name, age)
+	// Function (Return)
 }
 
-// pages 11
+// pages 25
