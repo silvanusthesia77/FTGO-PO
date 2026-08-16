@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"math"
 	"strings"
 )
 
@@ -14,10 +15,13 @@ func main() {
 	// learnCondition()
 	// learnLoopings()
 	// learnFunction("thby", 20)
-	names := []string{"Thby", "Junior"}
-	msgg := greet("Hiii, ", names)
-	fmt.Println(msgg)
-
+	// names := []string{"Thby", "Junior"}
+	// msgg := greet("Hiii, ", names)
+	// fmt.Println(msgg)
+	var diamter float64 = 5
+	var area, calculate = diam(diamter)
+	fmt.Println("Hasil area :", area)
+	fmt.Println("Hasil Calculate :", calculate)
 }
 func learnVariable() {
 	name := "thby"
@@ -330,5 +334,13 @@ func greet(msg string, names []string) string {
 func retnn() {
 	// Function (Returning multiple values)
 }
+func diam(d float64) (float64, float64) {
+	var area float64 = math.Pi * math.Pow(d/2, 2)
+	var circulate = math.Pi * d
 
-// pages 27
+	return area, circulate
+}
+
+// Function (Predefined return value)
+
+// pages 29
