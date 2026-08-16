@@ -13,7 +13,11 @@ func main() {
 	// learnSlice()
 	// learnCondition()
 	// learnLoopings()
-	learnFunction("thby", 20)
+	// learnFunction("thby", 20)
+	names := []string{"Thby", "Junior"}
+	msgg := greet("Hiii, ", names)
+	fmt.Println(msgg)
+
 }
 func learnVariable() {
 	name := "thby"
@@ -318,4 +322,13 @@ func learnFunction(name string, age int) {
 	// Function (Return)
 }
 
-// pages 25
+func greet(msg string, names []string) string {
+	join := strings.Join(names, " ")
+	result := fmt.Sprintf("%s %s", msg, join)
+	return result
+}
+func retnn() {
+	// Function (Returning multiple values)
+}
+
+// pages 27
