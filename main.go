@@ -18,10 +18,15 @@ func main() {
 	// names := []string{"Thby", "Junior"}
 	// msgg := greet("Hiii, ", names)
 	// fmt.Println(msgg)
-	var diamter float64 = 5
-	var area, calculate = diam(diamter)
-	fmt.Println("Hasil area :", area)
-	fmt.Println("Hasil Calculate :", calculate)
+	// var diamter float64 = 5
+	// var area, calculate = diam(diamter)
+	// fmt.Println("Hasil area :", area)
+	// fmt.Println("Hasil Calculate :", calculate)
+	var nilai float64 = 15
+	var area, circle = centimeter(nilai)
+	fmt.Println("Nilai Area :", area)
+	fmt.Println("Nilao Circle :", circle)
+
 }
 func learnVariable() {
 	name := "thby"
@@ -334,13 +339,13 @@ func greet(msg string, names []string) string {
 func retnn() {
 	// Function (Returning multiple values)
 }
-func diam(d float64) (float64, float64) {
-	var area float64 = math.Pi * math.Pow(d/2, 2)
-	var circulate = math.Pi * d
-
-	return area, circulate
+func centimeter(d float64) (area float64, circle float64) {
+	area = math.Pi * math.Pow(d/2, 2)
+	circle = math.Pi * d
+	return
 }
 
 // Function (Predefined return value)
+// Function (Variadic function #1)
 
-// pages warkop
+// pages 30
