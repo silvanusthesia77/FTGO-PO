@@ -343,4 +343,4 @@ func diam(d float64) (float64, float64) {
 
 // Function (Predefined return value)
 
-// pages 29
+// pages warkop
