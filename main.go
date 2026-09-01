@@ -3,6 +3,8 @@ package main
 import (
 	"fmt"
 	"strings"
+
+	"github.com/davecgh/go-spew/spew"
 )
 
 func main() {
@@ -45,4 +47,8 @@ func dataTypes() {
 	var decimalNumbers float32 = 3.63
 	fmt.Printf("decimal number : %f\n", decimalNumbers)
 	fmt.Printf("Decimal : %.3f \n", decimalNumbers)
+	spew.Dump(decimalNumbers)
+}
+func constantsOperators() {
+	// 24
 }
