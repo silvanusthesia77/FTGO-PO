@@ -9,7 +9,10 @@ import (
 
 func main() {
 	// variable()
-	dataTypes()
+	// dataTypes()
+	// constantsOperators()
+	// array()
+	slice()
 }
 func variable() {
 	name := "wanus"
@@ -50,5 +53,95 @@ func dataTypes() {
 	spew.Dump(decimalNumbers)
 }
 func constantsOperators() {
-	// 24
+	const appName string = "Aplikasi Jual Beli Murah"
+	fmt.Println(appName)
+
+	number := (2 + 2) * 3
+	nilai := 2 + 2*3
+	fmt.Println("Nilai :", nilai)
+	fmt.Println("Number :", number)
+	var firstCondition bool = 3 < 4
+	var secondCondition bool = 3 <= 4
+	var thirdCondition bool = "thoby" == "tHoby"
+	var fourthCondition bool = "thoby" != "tHoby"
+	fmt.Println("First Condition :", firstCondition)
+	fmt.Println("Second Condition :", secondCondition)
+	fmt.Println("third Condition :", thirdCondition)
+	fmt.Println("Fourth Condition :", fourthCondition)
+
+	wrong := false
+	wright := true
+
+	wrongAndWright := wrong && wright
+	wrongOrWright := wrong || wright
+	reverse := wrong != wright
+
+	spew.Dump("wrong and wrighr :", wrongAndWright)
+	spew.Dump("wrong atau wright :", wrongOrWright)
+	spew.Dump("Reverse :", reverse)
+}
+func array() {
+	names := [3]string{}
+	names[0] = "thoby"
+	names[1] = "parviddey"
+	names[2] = " junior"
+	for _, v := range names {
+		fmt.Println("Nama :", v)
+	}
+
+	number := [4]int{20, 30, 40, 50}
+	fmt.Println(number)
+	var angka [3]int
+	angka = [3]int{12, 13, 16}
+
+	fmt.Println(angka)
+
+	fruits := [3]string{}
+	fruits[0] = "Manggo"
+	fruits[1] = "Banana"
+	fruits[2] = "Strawberry"
+
+	for index, v := range fruits {
+		fmt.Println(index, v)
+	}
+
+	fmt.Println("\n", strings.Repeat("=", 45), "\n")
+	for i := 0; i < len(fruits); i++ {
+		fmt.Printf("index : %d ,  value : %s \n", i, fruits)
+	}
+
+	numbers := [2][3]int{{1, 2, 3}, {22, 33, 44}}
+	for _, v := range numbers {
+		for _, arry := range v {
+			fmt.Printf("index : %d \n", arry)
+		}
+	}
+	// Array (modify element through index) 36
+}
+func slice() {
+	fruits := []string{"Apple", "Papaya", "Grapes", "Banana", "Durian"}
+	_ = fruits
+	fmt.Println(fruits)
+	for _, v := range fruits {
+		fmt.Println(v)
+	}
+	// Slice (make function)
+
+	fruit := make([]string, 3)
+	fruit[0] = "Sagu"
+	fruit[1] = "Avocado"
+	fruit[2] = "Drink"
+	fruit = append(fruit, "Sayur - Mayur")
+	fmt.Printf("%#v\n", fruit)
+	student := make([]string, 2)
+	_ = student
+	student[0] = "Biba"
+	student[1] = "thobbiii"
+	student = append(student, "thobby", "junior")
+	fmt.Println(student)
+	for _, v := range student {
+		fmt.Println(v)
+	}
+
+	// Slice (append function with ellipsis)
 }
