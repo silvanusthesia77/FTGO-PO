@@ -142,6 +142,40 @@ func slice() {
 	for _, v := range student {
 		fmt.Println(v)
 	}
-
 	// Slice (append function with ellipsis)
+	fruit1 := []string{"Jambu", "Salak", "Nangka"}
+	frui2 := []string{"Dragon Fruit", "Star Fruit"}
+	fruit1 = append(fruit1, frui2...)
+	fmt.Println(fruit1)
+
+	// Slice (copy function)
+
+	buah := copy(fruit1, frui2)
+	fmt.Println(buah)
+
+	// Slice (slicing)
+
+	students := []string{"thoby", "parviddey", "junior", "luiz", "arthur", "kandmy"}
+	fmt.Println(students[:2])
+	fmt.Println(students[2:])
+	fmt.Println(students[1:3])
+	fmt.Println(students[:])
+
+	// Slice (combining slicing and append)
+
+	universities := []string{"Unsia", "Binus", "UGM", "UNY", "UKDW"}
+	universities = append(universities[1:], "Janabadra")
+	fmt.Println(universities)
+
+	// Slice (backing array)
+
+	players := []string{"Thoby", "Parviddey", "Junior", "Luiz", "Arthur"}
+	players1 := players[1:]
+	players1[0] = "Biiiibbbaaa"
+
+	fmt.Println("Players :", players)
+	fmt.Println("Players1 :", players1)
+
+	// Slice (cap function) 52
+
 }
