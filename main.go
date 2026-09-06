@@ -178,4 +178,30 @@ func slice() {
 
 	// Slice (cap function) 52
 
+	names := []string{"wanus", "marvel", "marcel", "imal"}
+	fmt.Println(len(names))
+	fmt.Println(cap(names))
+
+	fmt.Println("\n", strings.Repeat("=", 35), "\n")
+
+	names2 := names[0:3]
+	fmt.Println(len(names2))
+	fmt.Println(cap(names2))
+	fmt.Println("\n", strings.Repeat("=", 35), "\n")
+
+	names3 := names[1:]
+	fmt.Println(len(names3))
+	fmt.Println(cap(names3))
+
+	// Slice (creating a new backing array)
+
+	cars := []string{"Nizan", "Honda", "Yamaha", "Ertiga"}
+	newCras := []string{}
+
+	newCras = append(newCras, cars[1:]...)
+
+	fmt.Println("Cras :", cars)
+	fmt.Println("New Cars :", newCras)
 }
+
+// Challenge
