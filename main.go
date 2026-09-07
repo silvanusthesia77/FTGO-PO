@@ -13,7 +13,8 @@ func main() {
 	// constantsOperators()
 	// array()
 	// slice()
-	conditions()
+	// conditions()
+	loopings()
 }
 func variable() {
 	name := "wanus"
@@ -233,27 +234,46 @@ func conditions() {
 			fmt.Println("Just Believe in second Chance")
 		}
 	}
-
-	score := 4
+	// Nested Conditions
+	score := 0
 
 	if score > 8 {
 		switch score {
 		case 9:
-			fmt.Println("Great Job")
+			fmt.Println("Perfect")
 		default:
 			fmt.Println("Good Job")
 		}
 	} else {
 		if score == 6 {
-			fmt.Println("Weldone")
+			fmt.Println("Good")
 		} else if score == 4 {
-			fmt.Println("Not Bad")
+			fmt.Println("Kok Bisa 4")
 		} else {
-			fmt.Println("Bad")
+			fmt.Println("Mantap")
+			if score == 0 {
+				fmt.Println("goblok Loh")
+			}
 		}
-
 	}
 
 }
+func loopings() {
+	for i := 0; i < 5; i++ {
+		fmt.Println("Angka :", i)
+	}
 
-// Nested Conditions 10
+	// Loopings (second way of looping)
+
+	a := 0
+
+	for {
+		fmt.Println("Hasil :", a)
+		a++
+		if a == 5 {
+			break
+		}
+	}
+}
+
+// Loopings (break and continue keywords) 17
