@@ -12,7 +12,8 @@ func main() {
 	// dataTypes()
 	// constantsOperators()
 	// array()
-	slice()
+	// slice()
+	conditions()
 }
 func variable() {
 	name := "wanus"
@@ -205,3 +206,54 @@ func slice() {
 }
 
 // Challenge
+
+func conditions() {
+	currentYear := 2026
+
+	if age := currentYear - 2015; age < 16 {
+		fmt.Println("Kamu Belum Dapat Cetak KTP")
+	} else {
+		fmt.Println("Kamu Dapat Cetak KTP")
+	}
+
+	number := 5
+
+	switch {
+	case number == 8:
+		fmt.Println("Perfect")
+	case number == 6:
+		fmt.Println("Not Bad")
+	case number == 5:
+		fmt.Println("Come Back Stronger")
+		fallthrough
+	// Switch (fallthrough keyword)
+	default:
+		{
+			fmt.Println("Semangat Masih Ada tahun Depan")
+			fmt.Println("Just Believe in second Chance")
+		}
+	}
+
+	score := 4
+
+	if score > 8 {
+		switch score {
+		case 9:
+			fmt.Println("Great Job")
+		default:
+			fmt.Println("Good Job")
+		}
+	} else {
+		if score == 6 {
+			fmt.Println("Weldone")
+		} else if score == 4 {
+			fmt.Println("Not Bad")
+		} else {
+			fmt.Println("Bad")
+		}
+
+	}
+
+}
+
+// Nested Conditions 10
