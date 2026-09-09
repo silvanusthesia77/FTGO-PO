@@ -25,10 +25,16 @@ func main() {
 	// fmt.Println("Area :", area)
 	// fmt.Println("Circle :", circulate)
 
-	var hasil float64 = 15
-	var area, circle float64 = cuculate(hasil)
-	fmt.Println("Area :", area)
-	fmt.Println("Circle :", circle)
+	// var hasil float64 = 15
+	// var area, circle float64 = cuculate(hasil)
+	// fmt.Println("Area :", area)
+	// fmt.Println("Circle :", circle)
+	// students := print("thobias", "parviddey", "junior")
+	// fmt.Println(students)
+	// hasil := []int{1, 2, 3, 4, 5, 6, 7, 8}
+	// jumlah := sum(hasil...)
+	// fmt.Println(jumlah)
+	profile("tHobiiii", "Tempe ", "Nasi Padang", "Ikan Bakar")
 
 }
 func variable() {
@@ -341,6 +347,29 @@ func cuculate(d float64) (area float64, circle float64) {
 	circle = math.Pi * d
 	return
 
+}
+func print(names ...string) []map[string]string {
+	var resault []map[string]string
+	for i, v := range names {
+		student := fmt.Sprintf("student%d", i+1)
+		temp := map[string]string{
+			student: v,
+		}
+		resault = append(resault, temp)
+	}
+	return resault
+}
+func sum(number ...int) int {
+	total := 0
+	for _, v := range number {
+		total += v
+	}
+	return total
+}
+func profile(name string, favFood ...string) {
+	join := strings.Join(favFood, "")
+	fmt.Println("Hiii, I'm ", name)
+	fmt.Println("My Favorite Food Is ", join)
 }
 
 // Function (Variadic function #1) pages 30
