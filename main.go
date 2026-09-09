@@ -204,10 +204,9 @@ func slice() {
 
 	fmt.Println("Cras :", cars)
 	fmt.Println("New Cars :", newCras)
+
+	// Challenge
 }
-
-// Challenge
-
 func conditions() {
 	currentYear := 2026
 
@@ -274,6 +273,39 @@ func loopings() {
 			break
 		}
 	}
+	for j := 1; j <= 10; j++ {
+		if j%2 == 1 {
+			continue
+		}
+		if j > 8 {
+			break
+		}
+
+		fmt.Println("Anga J :", j)
+	}
+	// Loopings (Nested Looping)
+	for i := 0; i < 8; i++ {
+		for j := i; j < 8; j++ {
+			fmt.Print(j, "")
+		}
+		fmt.Println()
+	}
+	// Loopings (Label)
+outer:
+
+	for i := 0; i < 3; i++ {
+		fmt.Println("Hasil ke -> ", i+1)
+		for j := 0; j < 3; j++ {
+			if i == 2 {
+				break outer
+			}
+			fmt.Print(j, "")
+		}
+		fmt.Print("\n")
+	}
+}
+func function() {
+	// 22
 }
 
 // Loopings (break and continue keywords) 17
