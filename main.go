@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"math"
 	"strings"
 
 	"github.com/davecgh/go-spew/spew"
@@ -14,7 +15,21 @@ func main() {
 	// array()
 	// slice()
 	// conditions()
-	loopings()
+	// loopings()
+	// function("thobiaz", "Pelangi")
+	// names := []string{"thobiii"}
+	// hasil := greet("Hiii...,", names)
+	// fmt.Println(hasil)
+	// var hasil float64 = 15
+	// var area, circulate float64 = caculate(hasil)
+	// fmt.Println("Area :", area)
+	// fmt.Println("Circle :", circulate)
+
+	var hasil float64 = 15
+	var area, circle float64 = cuculate(hasil)
+	fmt.Println("Area :", area)
+	fmt.Println("Circle :", circle)
+
 }
 func variable() {
 	name := "wanus"
@@ -304,8 +319,28 @@ outer:
 		fmt.Print("\n")
 	}
 }
-func function() {
-	// 22
+func function(name, address string) {
+	fmt.Println("Nama :", name)
+	fmt.Println("Address :", address)
+}
+func greet(msg string, names []string) string {
+	// Function (Return)
+	joint := strings.Join(names, "")
+	hasil := fmt.Sprintf("%s %s", msg, joint)
+	return hasil
+}
+func caculate(d float64) (float64, float64) {
+	// Function (Returning multiple values)
+	var area float64 = math.Pi * math.Pow(d/2, 2)
+	var circulate float64 = math.Pi * d
+	return area, circulate
+}
+func cuculate(d float64) (area float64, circle float64) {
+	// Function (Predefined return value)
+	area = math.Pi * math.Pow(d/2, 2)
+	circle = math.Pi * d
+	return
+
 }
 
-// Loopings (break and continue keywords) 17
+// Function (Variadic function #1) pages 30
