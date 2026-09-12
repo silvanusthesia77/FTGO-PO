@@ -34,7 +34,8 @@ func main() {
 	// hasil := []int{1, 2, 3, 4, 5, 6, 7, 8}
 	// jumlah := sum(hasil...)
 	// fmt.Println(jumlah)
-	profile("tHobiiii", "Tempe ", "Nasi Padang", "Ikan Bakar")
+	// profile("tHobiiii", "Tempe ", "Nasi Padang", "Ikan Bakar")
+	pointer()
 
 }
 func variable() {
@@ -370,6 +371,16 @@ func profile(name string, favFood ...string) {
 	join := strings.Join(favFood, "")
 	fmt.Println("Hiii, I'm ", name)
 	fmt.Println("My Favorite Food Is ", join)
+}
+
+func pointer() {
+	var nilai int = 13
+	var hasil *int = &nilai
+
+	fmt.Println("nilai :", nilai)
+	fmt.Println("Hasil :", hasil)
+	fmt.Println("Hasil Ke-2 :", *hasil)
+	fmt.Println("Hasil ke 3 :", &nilai)
 }
 
 // Function (Variadic function #1) pages 30
