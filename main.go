@@ -374,13 +374,37 @@ func profile(name string, favFood ...string) {
 }
 
 func pointer() {
-	var nilai int = 13
-	var hasil *int = &nilai
+	var num int = 30
+	var num2 *int = &num
 
-	fmt.Println("nilai :", nilai)
-	fmt.Println("Hasil :", hasil)
-	fmt.Println("Hasil Ke-2 :", *hasil)
-	fmt.Println("Hasil ke 3 :", &nilai)
+	fmt.Println("Number :", num)
+	fmt.Println("Num2 :", &num)
+
+	fmt.Println("Num2 :", num2)
+	fmt.Println("num2 :", *num2)
+
+	var nilai int = 4
+	var hasilNiali *int = &nilai
+	fmt.Println("Nilai :", nilai)
+	fmt.Println("Nilai :", &nilai)
+	fmt.Println("Hasil Niali :", hasilNiali)
+	fmt.Println("Hasil Niali :", *hasilNiali)
+
+	fmt.Println("\n", strings.Repeat("=", 30), "\n")
+
+	fmt.Println("Hasil Dari String")
+
+	var name string = "thoby"
+	var name2 *string = &name
+	fmt.Println("Nama :", name)
+	fmt.Println("Nama :", &name)
+	fmt.Println("name2 :", name2)
+	fmt.Println("name2 :", *name2)
+
+	*name2 = "Junior"
+	fmt.Println("Name22 :", name2)
+	fmt.Println("Name22 :", *name2)
+
 }
 
-// Function (Variadic function #1) pages 30
+// pages 9
