@@ -8,6 +8,12 @@ import (
 	"github.com/davecgh/go-spew/spew"
 )
 
+type students struct {
+	nama  string
+	age   int
+	hobby string
+}
+
 func main() {
 	// variable()
 	// dataTypes()
@@ -35,8 +41,12 @@ func main() {
 	// jumlah := sum(hasil...)
 	// fmt.Println(jumlah)
 	// profile("tHobiiii", "Tempe ", "Nasi Padang", "Ikan Bakar")
-	pointer()
-
+	// pointer()
+	// var hasil int = 10
+	// fmt.Println("Hasil :", hasil)
+	// pointter(&hasil)
+	// fmt.Println("Hasill :", hasil)
+	struck()
 }
 func variable() {
 	name := "wanus"
@@ -406,5 +416,28 @@ func pointer() {
 	fmt.Println("Name22 :", *name2)
 
 }
+func pointter(number *int) {
+	*number = 20
+}
+func struck() {
+	var student students
+	student.nama = "Wanus"
+	student.age = 22
+	student.hobby = "Football"
+	fmt.Println(student.nama, student.age, student.hobby)
 
-// pages 9
+	// Struct (Initializing struct)
+
+	var student2 = students{"thobiiii", 20, "Player"}
+	fmt.Println(student2.nama, student2.age, student2.hobby)
+
+	var student3 *students = &student2
+	student3.nama = "Junior"
+	student3.age = 10
+	student3.hobby = "Lari"
+	fmt.Println(student3.nama, student3.age, student3.hobby)
+	// Struct (Embedded struct)
+
+}
+
+// pages 17
