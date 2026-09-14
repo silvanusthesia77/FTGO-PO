@@ -14,6 +14,17 @@ type students struct {
 	hobby string
 }
 
+//
+//	type Employe struct {
+//		name string
+//		age  int
+//	}
+//
+//	type Devisi struct {
+//		devision string
+//		employe  Employe
+//	}
+
 func main() {
 	// variable()
 	// dataTypes()
@@ -46,7 +57,9 @@ func main() {
 	// fmt.Println("Hasil :", hasil)
 	// pointter(&hasil)
 	// fmt.Println("Hasill :", hasil)
-	struck()
+	// struck()
+	// names()
+	anonimus()
 }
 func variable() {
 	name := "wanus"
@@ -437,7 +450,27 @@ func struck() {
 	student3.hobby = "Lari"
 	fmt.Println(student3.nama, student3.age, student3.hobby)
 	// Struct (Embedded struct)
+}
 
+func anonimus() {
+	var employee1 struct {
+		person Person
+		devisi string
+	}
+	employee1.person.name = "Ichall"
+	employee1.person.age = 18
+	employee1.devisi = "Keuangan"
+	fmt.Println(employee1.person.name, employee1.person.age, employee1.devisi)
+
+	var hasill Person
+	hasill.name = "Jiwa"
+	hasill.age = 22
+	fmt.Println(hasill.name, hasill.age)
+}
+
+type Person struct {
+	name string
+	age  int
 }
 
 // pages 17
