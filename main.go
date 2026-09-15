@@ -451,7 +451,6 @@ func struck() {
 	fmt.Println(student3.nama, student3.age, student3.hobby)
 	// Struct (Embedded struct)
 }
-
 func anonimus() {
 	var employee1 struct {
 		person Person
@@ -466,6 +465,30 @@ func anonimus() {
 	hasill.name = "Jiwa"
 	hasill.age = 22
 	fmt.Println(hasill.name, hasill.age)
+
+	var mhs struct {
+		people    Person
+		class     int
+		matakulia string
+		semester  int
+	}
+	mhs.people.name = "Junior"
+	mhs.people.age = 20
+	mhs.class = 3
+	mhs.matakulia = "Kalkulus"
+	mhs.semester = 6
+
+	fmt.Println(mhs.people.name, mhs.people.age, mhs.class, mhs.matakulia, mhs.semester)
+
+	var studentss = []Person{
+		{name: "Thoby", age: 20},
+		{name: "Luiz", age: 22},
+		{name: "arthur", age: 21},
+	}
+	for _, v := range studentss {
+		fmt.Printf("%+v\n", v)
+		fmt.Println(v.name, v.age)
+	}
 }
 
 type Person struct {
@@ -473,4 +496,4 @@ type Person struct {
 	age  int
 }
 
-// pages 17
+// pages 20
