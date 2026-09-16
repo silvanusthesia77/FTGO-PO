@@ -8,13 +8,12 @@ import (
 	"github.com/davecgh/go-spew/spew"
 )
 
-type students struct {
-	nama  string
-	age   int
-	hobby string
-}
+// type students struct {
+// 	nama  string
+// 	age   int
+// 	hobby string
+// }
 
-//
 //	type Employe struct {
 //		name string
 //		age  int
@@ -24,6 +23,10 @@ type students struct {
 //		devision string
 //		employe  Employe
 //	}
+// type Person struct {
+// 	name string
+// 	age  int
+// }
 
 func main() {
 	// variable()
@@ -489,11 +492,30 @@ func anonimus() {
 		fmt.Printf("%+v\n", v)
 		fmt.Println(v.name, v.age)
 	}
+	// Struct (Slice of struct)
+	var teacher = []Person{
+		{name: "Biiibbaa", age: 20},
+		{name: "Luiz", age: 22},
+		{name: "Arthur", age: 24},
+	}
+	for _, v := range teacher {
+		fmt.Printf("%+v\n", v)
+	}
+
+	var match = []struct {
+		players  Person
+		position string
+	}{
+		{players: Person{name: "Biiibbaa", age: 20}, position: "Striker"},
+		{players: Person{name: "Luis", age: 22}, position: "Back"},
+	}
+	for _, v := range match {
+		fmt.Printf("%+v\n", v)
+	}
+
+}
+func Method() {
+
 }
 
-type Person struct {
-	name string
-	age  int
-}
-
-// pages 20
+// pages 22
